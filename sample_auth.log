@@ -1,0 +1,28 @@
+Nov  5 08:14:02 web01 sshd[2201]: Failed password for root from 203.0.113.50 port 40122 ssh2
+Nov  5 08:14:05 web01 sshd[2201]: Failed password for root from 203.0.113.50 port 40124 ssh2
+Nov  5 08:14:09 web01 sshd[2203]: Failed password for invalid user admin from 203.0.113.50 port 40130 ssh2
+Nov  5 08:14:12 web01 sshd[2203]: Failed password for invalid user oracle from 203.0.113.50 port 40132 ssh2
+Nov  5 08:14:16 web01 sshd[2205]: Failed password for invalid user test from 203.0.113.50 port 40136 ssh2
+Nov  5 08:15:01 web01 sshd[2210]: Accepted password for rahul from 192.168.1.20 port 50211 ssh2
+Nov  5 08:16:44 web01 sshd[2220]: Failed password for ubuntu from 198.51.100.7 port 41000 ssh2
+Nov  5 08:16:48 web01 sshd[2220]: Failed password for ubuntu from 198.51.100.7 port 41002 ssh2
+Nov  5 08:16:52 web01 sshd[2221]: Failed password for invalid user pi from 198.51.100.7 port 41004 ssh2
+Nov  5 08:17:10 web01 sshd[2230]: Failed password for rahul from 192.168.1.20 port 50300 ssh2
+Nov  5 08:17:30 web01 sshd[2231]: Accepted publickey for deploy from 10.0.0.8 port 60022 ssh2
+Nov  5 08:18:02 web01 sshd[2240]: Failed password for invalid user guest from 45.33.32.156 port 33100 ssh2
+Nov  5 08:18:09 web01 sshd[2241]: Failed password for root from 45.33.32.156 port 33102 ssh2
+Nov  5 08:19:00 web01 sshd[2250]: Connection closed by 10.0.0.8 port 60022
+Nov  5 08:19:45 web01 sshd[2255]: Invalid user postgres from 91.200.12.4 port 55555
+Nov  5 08:19:47 web01 sshd[2255]: Failed password for invalid user postgres from 91.200.12.4 port 55555 ssh2
+Nov  5 08:20:10 web01 sudo: rahul : TTY=pts/0 ; COMMAND=/bin/ls
+Nov  5 08:21:20 web01 sshd[2260]: Failed password for root from 2001:db8::1 port 44000 ssh2
+Nov  5 08:21:25 web01 sshd[2260]: Failed password for root from 2001:db8::1 port 44002 ssh2
+Nov  5 08:21:30 web01 sshd[2260]: Failed password for root from 2001:db8::1 port 44004 ssh2
+
+Nov  5 08:22:00 web01 sshd[2270]: Failed password for john.doe from 10.0.0.99 port 51000 ssh2
+this line is corrupted garbage ##@@
+Nov  5 08:22:30 web01 sshd[2275]: Failed password for root from 203.0.113.50 port 40500 ssh2
+Nov  5 08:22:33 web01 sshd[2275]: Failed password for root from 203.0.113.50 port 40502 ssh2
+Nov  5 08:23:00 web01 sshd[2280]: Failed password for root from not-an-ip port 22 ssh2
+Nov  5 08:23:10 web01 sshd[2281]: pam_unix(sshd:auth): authentication failure; rhost=203.0.113.50
+Nov  5 08:23:20 web01 sshd[2282]: Failed password for root
