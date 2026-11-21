@@ -1,150 +1,279 @@
  <div align="center">
 
-# 🛡️ SSH BRUTE-FORCE DETECTOR
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&height=260&color=0:080D19,45:102B50,100:5427A8&text=SSH%20BRUTE-FORCE%20DETECTOR&fontColor=FFFFFF&fontSize=34&fontAlignY=42&desc=LINUX%20SECURITY%20%7C%20PYTHON%20%7C%20LOG%20ANALYSIS&descSize=13&descAlignY=62&animation=fadeIn" />
 
-### `LINUX SECURITY TOOL · PYTHON · LOG ANALYSIS`
+### DETECT. ANALYZE. DEFEND.
 
-**Detect. Analyze. Monitor.**
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=16&duration=2600&pause=900&color=38BDF8&center=true&vCenter=true&width=700&lines=Analyzing+Linux+SSH+Authentication+Logs;Tracking+Failed+Login+Attempts;Identifying+Suspicious+IP+Addresses;Built+With+Python+%7C+Defensive+Security" />
 
-A lightweight Python-based defensive security tool that analyzes Linux SSH authentication logs, identifies repeated failed login attempts, and flags potentially suspicious IP addresses.
+<br/>
 
-<br>
+<img src="https://img.shields.io/badge/PYTHON-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/PLATFORM-LINUX-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
+<img src="https://img.shields.io/badge/DOMAIN-CYBERSECURITY-8B5CF6?style=for-the-badge&logo=hackthebox&logoColor=white" />
+<img src="https://img.shields.io/badge/VERSION-1.0-0EA5E9?style=for-the-badge" />
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Platform](https://img.shields.io/badge/Platform-Linux-black?style=for-the-badge&logo=linux&logoColor=white)
-![Security](https://img.shields.io/badge/Domain-Cybersecurity-red?style=for-the-badge&logo=shield&logoColor=white)
-![Version](https://img.shields.io/badge/Version-1.0-blueviolet?style=for-the-badge)
+<br/><br/>
 
-<br>
-
-**[ FEATURES ](#-features) · [ INSTALLATION ](#-installation) · [ USAGE ](#-usage) · [ DEMO ](#-sample-output)**
+**[OVERVIEW](#01--project-overview) · [FEATURES](#02--core-capabilities) · [INSTALLATION](#05--installation) · [USAGE](#06--usage) · [DEMO](#08--sample-output)**
 
 </div>
 
 ---
 
-## `01` — PROJECT OVERVIEW
+<div align="center">
 
-SSH Brute-Force Detector is a command-line security tool designed to analyze Linux SSH authentication logs and identify IP addresses generating repeated failed login attempts.
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&lines=01+%E2%80%94+PROJECT+OVERVIEW;Understanding+SSH+Login+Activity" />
 
-It processes authentication events, groups failed attempts by IP address, tracks attempted usernames, and flags IPs that reach a configurable detection threshold.
+</div>
 
-The goal is simple: make basic SSH log analysis easier through Python automation.
+## About The Project
 
-> **Project Status:** V1.0 — Initial Release
+**SSH Brute-Force Detector** is a lightweight Python-based defensive security tool that analyzes Linux SSH authentication logs, counts failed login attempts, and identifies potentially suspicious IP addresses.
 
----
+It examines authentication events, tracks attempted usernames, records the first and last observed attempts, and flags IP addresses that reach a configurable failure threshold.
 
-## `02` — FEATURES
+The objective is to simplify basic SSH security log analysis through Python automation.
 
-| Feature | Description |
-|:--|:--|
-| 🔍 Failed Login Detection | Counts failed SSH authentication attempts per IP |
-| 🌐 IP Tracking | Supports both IPv4 and IPv6 addresses |
-| 👤 Username Analysis | Tracks the number of distinct usernames attempted |
-| ⏱️ Timestamp Tracking | Records first and last observed attempts |
-| 🚨 Suspicious IP Detection | Flags IPs based on a configurable threshold |
-| 📄 Log Validation | Skips malformed or unsupported log entries |
-| 📊 CSV Export | Saves analysis results to a CSV report |
-
----
-
-## `03` — HOW IT WORKS
-
-```text
-       LINUX SSH AUTH LOG
-                |
-                v
-       +------------------+
-       |   Read Log File  |
-       +------------------+
-                |
-                v
-       +------------------+
-       |   Parse Entries  |
-       +------------------+
-                |
-                v
-       +------------------+
-       | Detect Failed    |
-       | Login Attempts   |
-       +------------------+
-                |
-                v
-       +------------------+
-       | Group Data by IP |
-       +------------------+
-                |
-                v
-       +------------------+
-       | Check Threshold  |
-       +------------------+
-                |
-                v
-       +------------------+
-       | Generate Report  |
-       +------------------+
-                |
-          +-----+-----+
-          |           |
-          v           v
-      Terminal     CSV Export
+```yaml
+project:
+  name: SSH Brute-Force Detector
+  version: 1.0
+  language: Python
+  platform: Linux
+  category: Defensive Security
+  input: SSH Authentication Logs
+  output: Terminal Report / CSV Report
+  status: Initial Release
 ```
 
-**Detection Logic:** An IP address is marked `SUSPICIOUS` when its failed login count meets or exceeds the configured threshold.
+> A practical Python project exploring the fundamentals of security monitoring and authentication log analysis.
 
 ---
 
-## `04` — TECH STACK
+<div align="center">
 
-| Technology | Purpose |
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=02+%E2%80%94+CORE+CAPABILITIES;What+The+Detector+Can+Do" />
+
+</div>
+
+## Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 🔍 Failed Login Detection
+
+Counts failed SSH authentication attempts for each IP address.
+
+</td>
+<td width="50%">
+
+### 🌐 IP Address Tracking
+
+Supports IPv4 and IPv6 addresses.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 👤 Username Analysis
+
+Tracks the number of distinct usernames attempted from each IP.
+
+</td>
+<td width="50%">
+
+### ⏱️ Timestamp Analysis
+
+Records first and last observed login attempts.
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 🚨 Suspicious IP Detection
+
+Flags IP addresses that meet or exceed the configured threshold.
+
+</td>
+<td width="50%">
+
+### 📄 Log Validation
+
+Skips malformed or unsupported log entries without crashing.
+
+</td>
+</tr>
+<tr>
+<td colspan="2">
+
+### 📊 CSV Report Generation
+
+Exports analysis results into a CSV file for further examination.
+
+</td>
+</tr>
+</table>
+
+---
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=818CF8&center=true&vCenter=true&width=700&lines=03+%E2%80%94+DETECTION+WORKFLOW;From+Raw+Logs+To+Security+Insights" />
+
+</div>
+
+## How It Works
+
+The detector follows a straightforward log analysis pipeline.
+
+```text
+┌─────────────────────────────┐
+│   LINUX SSH AUTH LOG FILE   │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│       READ LOG ENTRIES      │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│      PARSE SSH EVENTS       │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│   IDENTIFY FAILED LOGINS    │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│    GROUP ATTEMPTS BY IP     │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│    CHECK FAILURE THRESHOLD  │
+└──────────────┬──────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│      GENERATE REPORT        │
+└──────────────┬──────────────┘
+               │
+          ┌────┴────┐
+          ▼         ▼
+     TERMINAL     CSV FILE
+```
+
+### Detection Logic
+
+An IP address is marked `SUSPICIOUS` when its total failed login attempts are greater than or equal to the configured threshold.
+
+For example:
+
+```python
+if failed_attempts >= threshold:
+    status = "SUSPICIOUS"
+else:
+    status = "ok"
+```
+
+*Illustrative explanation of the detection rule.*
+
+---
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=C084FC&center=true&vCenter=true&width=700&lines=04+%E2%80%94+TECHNOLOGY+STACK;Tools+Behind+The+Project" />
+
+</div>
+
+## Built With
+
+<div align="center">
+
+**PROGRAMMING LANGUAGE**
+
+<img src="https://skillicons.dev/icons?i=python&theme=dark" />
+
+<br/>
+
+**PLATFORM**
+
+<img src="https://skillicons.dev/icons?i=linux&theme=dark" />
+
+</div>
+
+### Python Standard Library
+
+| Module | Purpose |
 |:--|:--|
-| Python 3.8+ | Core programming language |
-| Regular Expressions (`re`) | SSH log parsing |
+| `re` | Regular expression-based log parsing |
 | `argparse` | Command-line argument handling |
 | `ipaddress` | IP address validation |
-| `csv` | Report generation |
+| `csv` | CSV report generation |
+| `collections` | Data organization, where used |
 | File Handling | Reading authentication logs |
 
-**Dependencies:** No external Python packages required. Uses Python's built-in standard library.
+**Dependencies:** No third-party Python packages are required. The project uses Python's built-in standard library.
 
 ---
 
-## `05` — INSTALLATION
+<div align="center">
 
-### Prerequisites
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&lines=05+%E2%80%94+INSTALLATION;Get+The+Detector+Running" />
+
+</div>
+
+## Prerequisites
+
+Before running the project, make sure you have:
 
 - Python 3.8 or newer
 - Git
-- Linux SSH authentication logs (or the included sample log)
+- A Linux SSH authentication log or the included sample log
 
-Check your Python installation:
+Check your Python version:
 
 ```bash
 python --version
 ```
 
-### Clone the Repository
+### Clone The Repository
 
 ```bash
 git clone https://github.com/siddharthkumar-sec/ssh-bruteforce-detector.git
 ```
 
+Navigate into the project directory:
+
 ```bash
 cd ssh-bruteforce-detector
 ```
 
+No additional package installation is necessary.
+
 ---
 
-## `06` — USAGE
+<div align="center">
 
-### Command Syntax
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=06+%E2%80%94+USAGE;Execute+The+Detection+Engine" />
+
+</div>
+
+## Command Syntax
 
 ```bash
 python analyzer.py [logfile] [-t THRESHOLD] [-o CSV_FILE]
 ```
 
-### Available Arguments
+### Command-Line Arguments
 
 | Argument | Description | Default |
 |:--|:--|:--|
@@ -152,33 +281,33 @@ python analyzer.py [logfile] [-t THRESHOLD] [-o CSV_FILE]
 | `-t`, `--threshold` | Minimum failed attempts to flag an IP | `5` |
 | `-o`, `--csv` | Export results to a CSV file | Disabled |
 
-### Examples
+### Execution Examples
 
-**1. Analyze the default sample log**
+**01 — Analyze the default sample log**
 
 ```bash
 python analyzer.py
 ```
 
-**2. Set a custom detection threshold**
+**02 — Set a custom detection threshold**
 
 ```bash
 python analyzer.py sample_auth.log -t 3
 ```
 
-**3. Export results to CSV**
+**03 — Generate a CSV report**
 
 ```bash
 python analyzer.py sample_auth.log -t 3 -o report.csv
 ```
 
-**4. Analyze a Linux authentication log**
+**04 — Analyze a real Linux authentication log**
 
 ```bash
 python analyzer.py /var/log/auth.log
 ```
 
-Some Linux distributions may store authentication logs at `/var/log/secure` instead.
+Some Linux distributions use `/var/log/secure` instead.
 
 For protected system logs, appropriate read permissions may be required:
 
@@ -188,7 +317,46 @@ sudo python3 analyzer.py /var/log/auth.log
 
 ---
 
-## `07` — SAMPLE OUTPUT
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=818CF8&center=true&vCenter=true&width=700&lines=07+%E2%80%94+SUPPORTED+LOGS;Know+Your+Input+Format" />
+
+</div>
+
+## Supported Log Format
+
+The detector is designed for Linux OpenSSH authentication log entries.
+
+### Example Entries
+
+```text
+Nov  5 08:14:02 web01 sshd[2201]: Failed password for root from 203.0.113.50 port 40122 ssh2
+
+Nov  5 08:14:09 web01 sshd[2203]: Failed password for invalid user admin from 203.0.113.50 port 40130 ssh2
+```
+
+### Compatibility
+
+| Log Source | Support |
+|:--|:--:|
+| Linux OpenSSH authentication logs | ✅ |
+| IPv4 addresses | ✅ |
+| IPv6 addresses | ✅ |
+| Windows Event Logs | ❌ |
+| Apache access logs | ❌ |
+| Nginx access logs | ❌ |
+
+---
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=C084FC&center=true&vCenter=true&width=700&lines=08+%E2%80%94+SAMPLE+OUTPUT;Detection+In+Action" />
+
+</div>
+
+## Terminal Demonstration
+
+The following is an illustrative output using the included sample dataset.
 
 ```text
 File: sample_auth.log | Threshold: 5
@@ -201,37 +369,37 @@ IP                  FAILS  USERS  FIRST SEEN       LAST SEEN        STATUS
 Lines read: 28 | Failed IPs: 7 | Suspicious: 1 | Skipped: 2
 ```
 
-*Illustrative output from the included sample dataset.*
+### Understanding The Results
+
+| Field | Meaning |
+|:--|:--|
+| IP | Source IP address |
+| FAILS | Total failed login attempts |
+| USERS | Distinct usernames attempted |
+| FIRST SEEN | First observed attempt |
+| LAST SEEN | Last observed attempt |
+| STATUS | Detection result |
+
+<details>
+<summary><b>What does SUSPICIOUS mean?</b></summary>
+
+An IP address receives the `SUSPICIOUS` status when its failed login count reaches or exceeds the configured threshold.
+
+This is a detection indicator for further investigation, not proof that an account was compromised or that an attack was successful.
+
+</details>
 
 ---
 
-## `08` — SUPPORTED LOG FORMAT
+<div align="center">
 
-The detector is designed for Linux OpenSSH authentication log entries.
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&lines=09+%E2%80%94+EXIT+CODES;Understanding+Program+Results" />
 
-Example:
+</div>
 
-```text
-Nov  5 08:14:02 web01 sshd[2201]: Failed password for root from 203.0.113.50 port 40122 ssh2
+## Exit Codes
 
-Nov  5 08:14:09 web01 sshd[2203]: Failed password for invalid user admin from 203.0.113.50 port 40130 ssh2
-```
-
-**Supported:**
-- Linux OpenSSH authentication logs.
-- Failed password entries.
-- IPv4 and IPv6 addresses.
-
-**Not supported:**
-- Windows Event Logs.
-- Apache access logs.
-- Nginx access logs.
-
----
-
-## `09` — EXIT CODES
-
-| Exit Code | Meaning |
+| Code | Meaning |
 |:--:|:--|
 | `0` | No suspicious IP detected |
 | `1` | At least one suspicious IP detected |
@@ -239,7 +407,13 @@ Nov  5 08:14:09 web01 sshd[2203]: Failed password for invalid user admin from 20
 
 ---
 
-## `10` — PROJECT STRUCTURE
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=10+%E2%80%94+PROJECT+STRUCTURE;Inside+The+Repository" />
+
+</div>
+
+## Repository Structure
 
 ```text
 ssh-bruteforce-detector/
@@ -253,67 +427,120 @@ ssh-bruteforce-detector/
 
 ---
 
-## `11` — WHAT I LEARNED
+<div align="center">
 
-Building this project helped me apply Python fundamentals to a practical cybersecurity use case.
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=818CF8&center=true&vCenter=true&width=700&lines=11+%E2%80%94+LEARNING+OUTCOMES;Knowledge+Applied+Through+Building" />
 
-**Python Development**
-- File handling and text processing.
-- Dictionaries and data structures.
-- Regular expressions.
-- Functions and modular programming.
-- Command-line argument parsing.
-- CSV file generation.
-- Exception handling.
+</div>
 
-**Cybersecurity Concepts**
-- SSH authentication logs.
-- Brute-force attack patterns.
-- Failed login analysis.
-- IP address tracking.
-- Basic security event monitoring.
+## What I Learned
+
+Building this project helped me apply Python fundamentals to a practical defensive cybersecurity use case.
+
+### Python Development
+
+- File handling and text processing
+- Dictionaries and data structures
+- Regular expressions
+- Functions and modular programming
+- Command-line argument parsing
+- CSV file generation
+- Exception handling
+
+### Cybersecurity Concepts
+
+- SSH authentication logs
+- Brute-force attack patterns
+- Failed login analysis
+- IP address tracking
+- Basic security event monitoring
+
+**The biggest takeaway:** Understanding programming concepts becomes more meaningful when they are applied to real-world technical problems.
 
 ---
 
-## `12` — DEVELOPMENT ROADMAP
+<div align="center">
 
-This repository represents the initial V1.0 release.
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=C084FC&center=true&vCenter=true&width=700&lines=12+%E2%80%94+DEVELOPMENT+ROADMAP;One+Version+At+A+Time" />
 
-Future versions will focus on gradually improving the tool's functionality, reliability, and capabilities.
+</div>
 
-| Release | Development |
+## Version History
+
+<details open>
+<summary><b>V1.0 — Initial Release</b></summary>
+
+- Linux SSH authentication log analysis
+- Failed login attempt counting
+- IPv4 and IPv6 support
+- Username tracking
+- First and last attempt timestamps
+- Configurable suspicious IP threshold
+- CSV report export
+
+</details>
+
+### Future Development
+
+This repository currently represents V1.0.
+
+Future versions will introduce improvements incrementally as development progresses.
+
+| Version | Status |
 |:--|:--|
-| V1.0 | Initial SSH log analysis and suspicious IP detection |
-| V1.x | Planned incremental improvements |
-| V2.0+ | Future feature development |
+| V1.0 | Initial release |
+| V1.x | Future incremental improvements |
+| V2.0+ | Future major development |
 
-*Future features are not part of the current V1.0 release.*
+*Planned improvements are not implemented features of the current release.*
 
 ---
 
-## `13` — DISCLAIMER
+<div align="center">
 
-This tool is intended for defensive security monitoring, educational purposes, and authorized log analysis.
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&lines=13+%E2%80%94+DISCLAIMER;Responsible+Security+Development" />
 
-- Use it only on systems you own or have permission to monitor.
+</div>
+
+## Responsible Use
+
+This project is developed for educational purposes, defensive security monitoring, and authorized authentication log analysis.
+
+- Analyze only systems you own or have explicit permission to monitor.
 - A suspicious IP flag is an indicator for further investigation, not proof of a successful attack.
-- The included `sample_auth.log` contains synthetic test data, not real attack records.
+- The included `sample_auth.log` contains synthetic test data.
 - This tool does not automatically block IP addresses or prevent attacks.
 
 ---
 
 <div align="center">
 
-### BUILT WITH PYTHON. INSPIRED BY CYBERSECURITY.
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2500&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=14+%E2%80%94+PROJECT+CREDITS;Built+Through+Learning+And+Experimentation" />
 
-**Siddharth Kumar**
+<br/>
 
-*Learning · Building · Securing*
+### DEVELOPED BY
 
-[GitHub Profile](https://github.com/siddharthkumar-sec) · [Project Repository](https://github.com/siddharthkumar-sec/ssh-bruteforce-detector)
+# SIDDHARTH KUMAR
 
-<br>
+**Python Developer in Progress | Cybersecurity Learner**
 
-`END OF V1.0`
+<br/>
+
+<a href="https://github.com/siddharthkumar-sec">
+<img src="https://img.shields.io/badge/GITHUB-161B22?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+<a href="https://github.com/siddharthkumar-sec/ssh-bruteforce-detector">
+<img src="https://img.shields.io/badge/PROJECT_REPOSITORY-5427A8?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+<br/><br/>
+
+**UNDERSTAND THE SYSTEM. ANALYZE THE SIGNAL. BUILD THE SOLUTION.**
+
+<br/>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:5427A8,50:142B4D,100:080D19&height=130&section=footer" />
 
 </div>
